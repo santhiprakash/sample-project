@@ -1,0 +1,14 @@
+### Project Context
+Develop a comprehensive portal for resume building that enables users to subscribe for enhanced features. The platform should showcase a modern and simple user interface that prioritizes ease of use, ensuring that even individuals with minimal technical skills can navigate effortlessly.
+
+Key features should include a diverse selection of customizable templates tailored to various industries and job types. The freemium version will provide a limited assortment of basic templates to get users started, while paid subscription tiers will unlock access to a vast library of premium templates and additional functionalities.
+
+Specialized features may include:
+- **ATS Optimization Tools**: An analysis function that evaluates resumes against Applicant Tracking Systems (ATS), giving users scores and actionable feedback to improve their resumes’ visibility.
+- **Cover Letter Builder**: A complementary tool that assists users in crafting personalized cover letters alongside their resumes.
+- **Job Matching**: Integration with job platforms to recommend relevant job listings based on the user's resume content, helping users target applications more effectively.
+- **AI Resume Generator**: For new users, consider implementing an AI-driven feature that generates a complete resume by asking a series of guided questions about the user's background, skills, and career aspirations, ensuring a polished and professional output that meets industry standards.
+
+Overall, the portal should serve as a one-stop solution for all resume-related needs, empowering users at every stage of their job search journey.
+
+Make the application responsive and user-friendly, with a straightforward and intuitive interface that allows users to navigate easily. Modernize the UI with CSS frameworks like Tailwind CSS for faster development and a more consistent user experience.
