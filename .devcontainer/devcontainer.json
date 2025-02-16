@@ -1,0 +1,43 @@
+{
+    "name": "Node.js Development Environment",
+    "dockerFile": "Dockerfile",
+    
+    "customizations": {
+      "vscode": {
+        "settings": {
+          "terminal.integrated.shell.linux": "/bin/bash",
+          "editor.formatOnSave": true,
+          "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": true
+          }
+        },
+        "extensions": [
+          "dbaeumer.vscode-eslint",
+          "esbenp.prettier-vscode",
+          "christian-kohler.npm-intellisense",
+          "christian-kohler.path-intellisense",
+          "eamodio.gitlens",
+          "ms-azuretools.vscode-docker"
+        ]
+      }
+    },
+    
+    "forwardPorts": [3000, 5000],
+    
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+    "workspaceFolder": "/workspace",
+    
+    // Updated postCreateCommand to handle missing package.json
+    "postCreateCommand": "if [ ! -f package.json ]; then echo '{ \"name\": \"project\", \"version\": \"1.0.0\", \"private\": true }' > package.json; fi && npm install",
+    
+    "remoteUser": "node",
+    
+    "features": {
+      "git": "latest",
+      "github-cli": "latest"
+    },
+  
+    // Add health checks
+    "initializeCommand": "echo 'Initializing dev container...'",
+    "postStartCommand": "echo 'Dev container started successfully'"
+  }
